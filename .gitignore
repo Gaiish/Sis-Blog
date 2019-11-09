@@ -4,3 +4,4 @@ node_modules/
 .nowignore
 now.json
 .env
+*.zip

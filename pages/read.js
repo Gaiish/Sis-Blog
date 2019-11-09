@@ -1,9 +1,11 @@
 // // TODO: read blog page
 
-function React() {
+function Read() {
   return (
     <div>
       <h1>Reading blog ...</h1>
     </div>
   );
 }
+
+export default Read;
