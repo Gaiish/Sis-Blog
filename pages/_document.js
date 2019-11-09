@@ -1,3 +1,4 @@
+// TODO: add meta tags for seo
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -10,6 +11,15 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
+          <meta
+            name="application-name"
+            content="Blog by Gateka florene | Gaflo"
+          />
           <link
             rel="stylesheet"
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

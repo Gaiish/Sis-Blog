@@ -12,6 +12,8 @@
  */
 
 import { Container, Row, Col } from "react-bootstrap";
+import Nothing from "../components/nothing";
+import BlogItem from "../components/blogItem";
 
 function App() {
   return (
@@ -26,19 +28,16 @@ function App() {
         {/* list of blogs if there are some. */}
         {blogs ? (
           blogs.map(({ title, extrait, image, createdAt }, index) => (
-            <Col md="4" sm="12" key={index}>
-              <h3>{title}</h3>
-              <p>{extrait}</p>
-              <h6>{createdAt}</h6>
-            </Col>
+            <BlogItem
+              key={index}
+              title={title}
+              extrait={extrait}
+              createdAt={createdAt}
+              image={image}
+            />
           ))
         ) : (
-          <Col xs={{ span: 12 }}>
-            <div className="nothing">
-              <h3>👋 Hi, nothing yet, adding my first blog soon 🚀.</h3>
-              <h1>💃🏽</h1>
-            </div>
-          </Col>
+          <Nothing />
         )}
       </Row>
       {/* body */}
@@ -51,18 +50,6 @@ function App() {
             align-items: center;
             margin: 20px 0 20px 0;
           }
-          .nothing {
-            margin-top: 90px;
-          }
-          .nothing h3 {
-            font-weight: 200;
-            text-align: center;
-          }
-          .nothing h1 {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 150px;
-          }
         `}
       </style>
     </Container>
@@ -70,50 +57,50 @@ function App() {
 }
 
 // sample array of random blogs
-const blogs = null;
-// const blogs = [
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   }
-// ];
+// const blogs = null;
+const blogs = [
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  },
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  },
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  },
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  },
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  },
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  },
+  {
+    title: "How to implement dark mode in React Native",
+    extrait: "Are you ready to join the dark side?⚫️",
+    image: null,
+    createdAt: "Jun 18"
+  }
+];
 
 export default App;
