@@ -5,7 +5,7 @@ function BlogItem({ title, image, extrait, createdAt }) {
   return (
     <Col md={{ span: "5", offset: 1 }} sm="12">
       <div className="blog-item">
-        <Link href="#">
+        <Link href="/read">
           <a>
             <h4>{title}</h4>
             <p className="text-muted">{extrait}</p>

@@ -60,8 +60,9 @@ function App() {
 // const blogs = null;
 const blogs = [
   {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
+    title: "Reading Nothing To Something Everyday",
+    extrait:
+      "I went from reading nothing to reading something every day. The result was surprising.",
     image: null,
     createdAt: "Jun 18"
   },

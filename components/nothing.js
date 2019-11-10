@@ -20,7 +20,7 @@ function Nothing() {
           .nothing h1 {
             text-align: center;
             margin-top: 50px;
-            font-size: 150px;
+            font-size: 140px;
           }
         `}
       </style>
