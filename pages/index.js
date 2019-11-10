@@ -59,51 +59,51 @@ function App() {
 }
 
 // sample array of random blogs
-// const blogs = null;
-const blogs = [
-  {
-    title: "Reading Nothing To Something Everyday",
-    extrait:
-      "I went from reading nothing to reading something every day. The result was surprising.",
-    image: null,
-    createdAt: "Jun 18"
-  },
-  {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
-    image: null,
-    createdAt: "Jun 18"
-  },
-  {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
-    image: null,
-    createdAt: "Jun 18"
-  },
-  {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
-    image: null,
-    createdAt: "Jun 18"
-  },
-  {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
-    image: null,
-    createdAt: "Jun 18"
-  },
-  {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
-    image: null,
-    createdAt: "Jun 18"
-  },
-  {
-    title: "How to implement dark mode in React Native",
-    extrait: "Are you ready to join the dark side?⚫️",
-    image: null,
-    createdAt: "Jun 18"
-  }
-];
+const blogs = null;
+// const blogs = [
+//   {
+//     title: "Reading Nothing To Something Everyday",
+//     extrait:
+//       "I went from reading nothing to reading something every day. The result was surprising.",
+//     image: null,
+//     createdAt: "Jun 18"
+//   },
+//   {
+//     title: "How to implement dark mode in React Native",
+//     extrait: "Are you ready to join the dark side?⚫️",
+//     image: null,
+//     createdAt: "Jun 18"
+//   },
+//   {
+//     title: "How to implement dark mode in React Native",
+//     extrait: "Are you ready to join the dark side?⚫️",
+//     image: null,
+//     createdAt: "Jun 18"
+//   },
+//   {
+//     title: "How to implement dark mode in React Native",
+//     extrait: "Are you ready to join the dark side?⚫️",
+//     image: null,
+//     createdAt: "Jun 18"
+//   },
+//   {
+//     title: "How to implement dark mode in React Native",
+//     extrait: "Are you ready to join the dark side?⚫️",
+//     image: null,
+//     createdAt: "Jun 18"
+//   },
+//   {
+//     title: "How to implement dark mode in React Native",
+//     extrait: "Are you ready to join the dark side?⚫️",
+//     image: null,
+//     createdAt: "Jun 18"
+//   },
+//   {
+//     title: "How to implement dark mode in React Native",
+//     extrait: "Are you ready to join the dark side?⚫️",
+//     image: null,
+//     createdAt: "Jun 18"
+//   }
+// ];
 
 export default App;
