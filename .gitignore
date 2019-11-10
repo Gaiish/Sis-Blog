@@ -4,4 +4,5 @@ node_modules/
 .nowignore
 now.json
 .env
+.env.build
 *.zip

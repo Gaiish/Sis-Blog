@@ -2,6 +2,9 @@ import App from "next/app";
 import Head from "next/head";
 import React from "react";
 
+import firebase from "firebase/app";
+import config from "../config";
+
 export default class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
@@ -11,6 +14,13 @@ export default class MyApp extends App {
     }
 
     return { pageProps };
+  }
+
+  componentDidMount() {
+    // initialize firebase
+    if (!firebase.apps.length) {
+      firebase.initializeApp(config);
+    }
   }
 
   render() {

@@ -11,6 +11,8 @@
  * good readable font is key
  */
 
+// if logged in show the user link to page write.
+
 import { Container, Row, Col } from "react-bootstrap";
 import Nothing from "../components/nothing";
 import BlogItem from "../components/blogItem";
