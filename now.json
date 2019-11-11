@@ -26,5 +26,6 @@
       "MESSAGING_SENDER_ID": "@messaging_sender_id",
       "APP_ID": "@app_id"
     }
-  }
+  },
+  "alias": ["gaflo.now.sh"]
 }
