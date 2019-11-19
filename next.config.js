@@ -1,4 +1,7 @@
-module.exports = {
+// css files loader and load firebase credentials env
+const withCSS = require("@zeit/next-css");
+
+module.exports = withCSS({
   env: {
     API_KEY: process.env.API_KEY,
     AUTH_DOMAIN: process.env.AUTH_DOMAIN,
@@ -8,4 +11,4 @@ module.exports = {
     MESSAGING_SENDER_ID: process.env.MESSAGING_SENDER_ID,
     APP_ID: process.env.APP_ID
   }
-};
+});

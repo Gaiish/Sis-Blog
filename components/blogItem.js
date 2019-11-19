@@ -1,17 +1,24 @@
 import { Col } from "react-bootstrap";
 import Link from "next/link";
 
-function BlogItem({ title, image, extrait, createdAt }) {
+import Moment from "moment";
+
+function BlogItem({ title, image, contentPreview, createdAt, content }) {
   return (
     <Col md={{ span: "5", offset: 1 }} sm="12">
       <div className="blog-item">
-        <Link href="/read">
+        <Link
+          href={`/read?content=${content}`}
+          as={`/read/${title.split(" ").join("-")}`}
+        >
           <a>
             <h4>{title}</h4>
-            <p className="text-muted">{extrait}</p>
+            <p className="text-muted">{contentPreview}</p>
           </a>
         </Link>
-        <h6 className="text-muted">{createdAt}</h6>
+        <h6 className="text-muted">
+          {Moment(createdAt.seconds * 1000).calendar()}
+        </h6>
       </div>
 
       <style jsx>

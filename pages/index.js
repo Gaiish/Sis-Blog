@@ -12,12 +12,34 @@
  */
 
 // if logged in show the user link to page write.
+import React, { useEffect, useState } from "react";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import Nothing from "../components/nothing";
 import BlogItem from "../components/blogItem";
 
+import firebase from "firebase/app";
+import "firebase/firestore";
+
 function App() {
+  const [blogs, setBlogs] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    // get the blogs
+    const db = firebase.firestore().collection("blogs");
+
+    db.onSnapshot(snap => {
+      let data = [];
+
+      snap.docs.forEach(doc => {
+        data = [...data, doc.data()];
+      });
+
+      setBlogs(data);
+    });
+  }, []);
+
   return (
     <Container>
       <div className="welcome">
@@ -29,15 +51,18 @@ function App() {
       <Row>
         {/* list of blogs if there are some. */}
         {blogs ? (
-          blogs.map(({ title, extrait, image, createdAt }, index) => (
-            <BlogItem
-              key={index}
-              title={title}
-              extrait={extrait}
-              createdAt={createdAt}
-              image={image}
-            />
-          ))
+          blogs.map(
+            ({ title, contentPreview, image, createdAt, content }, index) => (
+              <BlogItem
+                key={index}
+                title={title}
+                contentPreview={contentPreview}
+                createdAt={createdAt}
+                image={image}
+                content={content}
+              />
+            )
+          )
         ) : (
           <Nothing />
         )}
@@ -57,53 +82,5 @@ function App() {
     </Container>
   );
 }
-
-// sample array of random blogs
-const blogs = null;
-// const blogs = [
-//   {
-//     title: "Reading Nothing To Something Everyday",
-//     extrait:
-//       "I went from reading nothing to reading something every day. The result was surprising.",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   },
-//   {
-//     title: "How to implement dark mode in React Native",
-//     extrait: "Are you ready to join the dark side?⚫️",
-//     image: null,
-//     createdAt: "Jun 18"
-//   }
-// ];
 
 export default App;
